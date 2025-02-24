@@ -6,142 +6,12 @@
     <title>Pat & Keegan's Wedding</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: #f9f6f2;
-            color: #5a4a42;
-            line-height: 1.6;
-        }
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
-            color: #a0522d;
-        }
-        .hero {
-            background: url('gallery/bg.jpg') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.1); 
-        }
-        .hero h1 {
-            font-size: 5rem;
-            font-weight: bold;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-            margin-bottom: 1rem;
-            animation: fadeInDown 1.5s ease-out;
-        }
-        .hero p {
-            font-size: 1.75rem;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-            animation: fadeInUp 1.5s ease-out;
-        }
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 2rem;
-            animation: fadeIn 2s ease-out;
-        }
-        .countdown div {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            min-width: 100px;
-        }
-        .countdown span {
-            display: block;
-            font-size: 2rem;
-            font-weight: bold;
-            color: #a0522d;
-        }
-        .section {
-            padding: 100px 0;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 1s ease, transform 1s ease;
-        }
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .story-image {
-            max-width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-top: 2rem;
-            transition: transform 0.5s ease;
-        }
-        .story-image:hover {
-            transform: scale(1.05);
-        }
-        .card {
-            background: rgba(255, 255, 255, 0.95);
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.5s ease;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-        }
-        .invitation {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .btn-primary {
-            background-color: #a0522d;
-            border-color: #a0522d;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
-        .btn-primary:hover {
-            background-color: #8b4513;
-            border-color: #8b4513;
-        }
-        footer {
-            background: #a0522d;
-            color: white;
-            padding: 20px 0;
-            font-size: 0.9rem;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Hero Section -->
     <div class="hero">
-        <div class="container">
+        <div class="container text-center">
             <h1>Pat & Keegan</h1>
             <p>July 25, 2030 | Join Us in Celebration</p>
             <div class="countdown" id="countdown">
@@ -149,30 +19,6 @@
                 <div><span id="hours"></span>Hours</div>
                 <div><span id="minutes"></span>Minutes</div>
                 <div><span id="seconds"></span>Seconds</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Our Story Section -->
-    <div class="section text-center">
-        <div class="container">
-            <h2 class="p-5">Our Story</h2>
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <img src="gallery/wedding.png" alt="Pat & Keegan" class="story-image img-fluid rounded">
-                </div>
-                <div class="col-md-6">
-                    <p>
-                        Our love story began on a bright afternoon in Central Park, where fate brought us together 
-                        over a spilled cup of coffee and a shared laugh. From that moment, our connection grew 
-                        stronger through life’s twists and turns. With each challenge and triumph, we’ve supported 
-                        one another, deepened our bond, and fallen even more in love. Now, we’re excited to embark 
-                        on our greatest adventure yet—marriage! Along the way, we’ve been blessed with the love 
-                        and support of our wonderful family, both human and furry. Meet the ones who’ve made our 
-                        journey even more special!
-                    </p>
-                    <a href="family.html" class="btn btn-primary mt-3">Meet My Family</a>
-                </div>
             </div>
         </div>
     </div>
@@ -208,7 +54,6 @@
             <a href="wedding.html" class="btn btn-primary mt-4">See More Details About Wedding</a>
         </div>
     </div>
-    
 
     <!-- RSVP Section -->
     <div class="section text-center">
@@ -240,9 +85,12 @@
     </div>
 
     <!-- Footer -->
-    <footer class="text-center">
-        <p>Pat & Keegan | All rights reserved to Pat & Keegan</p>
-    </footer>
+    <footer class="footer text-center">
+        <div class="container">
+            <p>&copy; 2025 Pat & Keegan | All Rights Reserved</p>
+        </div>
+    </footer>    
+    
 
     <script>
         // Countdown Timer
@@ -262,12 +110,15 @@
             document.getElementById("seconds").innerText = seconds;
 
             if (timeLeft < 0) {
-                clearInterval(countdown);
+                clearInterval(countdownInterval);
                 document.getElementById("countdown").innerHTML = "<h2>We're Married!</h2>";
             }
         };
 
-        setInterval(countdown, 1000);
+        setTimeout(() => {
+            countdown();
+            const countdownInterval = setInterval(countdown, 1000);
+        }, 500);
 
         // Fade-in effect on scroll
         const sections = document.querySelectorAll(".section");
