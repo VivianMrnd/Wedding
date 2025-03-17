@@ -371,12 +371,12 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 10px;
 }
 
- /* Animation Classes */
- /* .fade-in {
+/* Animation Classes */
+.fade-in {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 1s ease, transform 1s ease;
-} */
+}
 
 .fade-in.appear {
     opacity: 1;
